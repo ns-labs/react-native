@@ -511,10 +511,10 @@ RCT_NOT_IMPLEMENTED(- (instancetype)init)
       [SSLOptions setValue:@NO forKey:(__bridge id)kCFStreamSSLValidatesCertificateChain];
     }
 
-#if DEBUG
+// #if DEBUG - removed
     [SSLOptions setValue:@NO forKey:(__bridge id)kCFStreamSSLValidatesCertificateChain];
     RCTLogInfo(@"SocketRocket: In debug mode.  Allowing connection to any root cert");
-#endif
+// #endif
 
     [_outputStream setProperty:SSLOptions
                         forKey:(__bridge id)kCFStreamPropertySSLSettings];
